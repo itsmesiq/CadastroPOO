@@ -210,15 +210,12 @@ public class Main {
         tipoPessoa = scanner.next().toUpperCase();
         scanner.nextLine();
 
-        System.out.println("DEBUG tipo: [" + tipoPessoa + "]");
-
         return tipoPessoa;
     }
 
     public static int coletarId(Scanner scanner){
         int id;
-
-        System.out.println("DEBUG: entrando em coletarId");
+        
         System.out.println("Digite o ID da pessoa:");
         id = scanner.nextInt();
         scanner.nextLine();
