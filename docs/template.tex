@@ -1,0 +1,241 @@
+\documentclass[10pt,a4paper]{article}
+
+% =========================================================
+% PACOTES
+% =========================================================
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage{float}
+\floatplacement{figure}{H}
+
+% =========================================================
+% CONFIGURAÇÕES DA PÁGINA
+% =========================================================
+
+\geometry{
+    a4paper,
+    top=2.5cm,
+    bottom=2.5cm,
+    left=2cm,
+    right=2cm
+}
+
+% =========================================================
+% FONTES
+% =========================================================
+
+\setmainfont{Montserrat}[
+    UprightFont = {Montserrat-Regular.otf},
+    BoldFont = {Montserrat-SemiBold.otf},
+    ItalicFont = {Montserrat-Italic.otf},
+    BoldItalicFont = {Montserrat-SemiBoldItalic.otf}
+]
+
+% =========================================================
+% TEXTO
+% =========================================================
+
+\onehalfspacing
+
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+
+% =========================================================
+% TÍTULOS
+% =========================================================
+
+\titleformat{\section}
+    {\normalfont\fontsize{16}{19}\selectfont\bfseries}
+    {\thesection}
+    {0.8em}
+    {}
+
+\titleformat{\subsection}
+    {\normalfont\fontsize{13}{16}\selectfont\bfseries}
+    {\thesubsection}
+    {0.8em}
+    {}
+
+\titleformat{\subsubsection}
+    {\normalfont\fontsize{12}{15}\selectfont\bfseries}
+    {\thesubsubsection}
+    {0.8em}
+    {}
+
+% =========================================================
+% FIGURAS
+% =========================================================
+
+\captionsetup[figure]{
+    name=Figura,
+    labelfont=bf,
+    textfont=normalfont,
+    justification=centering,
+    font=small,
+    labelsep=endash
+}
+
+% Limita as imagens à área útil da página
+\setkeys{Gin}{
+    width=0.9\textwidth,
+    height=0.65\textheight,
+    keepaspectratio
+}
+
+% =========================================================
+% CABEÇALHO E RODAPÉ
+% =========================================================
+
+\pagestyle{fancy}
+
+\fancyhf{}
+
+\lhead{
+    \scriptsize\textbf{ESTÁCIO} \;|\;
+    DGT2821 — Desenvolvimento Full Stack
+}
+
+\rhead{
+    \scriptsize Relatório de Práticas
+}
+
+\cfoot{\scriptsize\thepage}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% =========================================================
+% HYPERLINKS
+% =========================================================
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black
+}
+
+% Compatibilidade com listas geradas pelo Pandoc
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+}
+
+% Compatibilidade com listas e imagens geradas pelo Pandoc
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}%
+    \setlength{\parskip}{0pt}%
+}
+
+\providecommand{\pandocbounded}[1]{#1}
+
+% =========================================================
+% DOCUMENTO
+% =========================================================
+
+\begin{document}
+
+% =========================================================
+% CAPA
+% =========================================================
+
+\begin{titlepage}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+% ---------------------------------------------------------
+% LOGO
+% ---------------------------------------------------------
+
+\includegraphics[
+    width=5cm
+]{imagens/logoestacio.png}
+
+\vspace{0.5cm}
+
+% ---------------------------------------------------------
+% INSTITUIÇÃO
+% ---------------------------------------------------------
+
+{\large\textbf{Estácio Unidade Nova Friburgo - RJ}}
+
+\vspace{0.15cm}
+
+{\normalsize Desenvolvimento Full Stack}
+
+\vspace{1.5cm}
+
+% ---------------------------------------------------------
+% DADOS DA DISCIPLINA
+% ---------------------------------------------------------
+
+{\normalsize
+Disciplina: DGT2821\\
+Turma: 9001\\
+Semestre: 2026.2
+}
+
+\vspace{2.5cm}
+
+% ---------------------------------------------------------
+% TÍTULO
+% ---------------------------------------------------------
+
+{\Large\textbf{RELATÓRIO DE PRÁTICAS}}
+
+\vspace{0.2cm}
+
+{\normalsize
+Criação das Entidades e Sistema de Persistência
+}
+
+\vspace{2cm}
+
+% ---------------------------------------------------------
+% ALUNO
+% ---------------------------------------------------------
+
+{\normalsize
+Aluno: Ana Carolina Portela Siqueira\\
+Matrícula: 20206073067
+}
+
+\vfill
+
+% ---------------------------------------------------------
+% LOCAL E DATA
+% ---------------------------------------------------------
+
+{\normalsize
+Nova Friburgo — RJ\\
+2026
+}
+
+\end{center}
+
+\end{titlepage}
+
+% =========================================================
+% SUMÁRIO
+% =========================================================
+
+\tableofcontents
+
+\newpage
+
+% =========================================================
+% CONTEÚDO DO MARKDOWN
+% =========================================================
+
+$body$
+
+\end{document}
